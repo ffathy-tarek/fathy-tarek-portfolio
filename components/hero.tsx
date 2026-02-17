@@ -12,7 +12,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
+    <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
       {/* Subtle background decoration */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl" />
