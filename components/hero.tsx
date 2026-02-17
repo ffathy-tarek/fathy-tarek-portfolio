@@ -25,8 +25,9 @@ export function Hero() {
             visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            {"Fathy Tarek Sanad"}
+          <h1 className="text-balance font-heading text-5xl font-extrabold tracking-wide leading-tight text-foreground sm:text-6xl lg:text-7xl">
+            <div className="text-white">{"Fathy Tarek"}</div>
+            <div className="name-glow">{"Sanad"}</div>
           </h1>
         </div>
 
@@ -36,7 +37,7 @@ export function Hero() {
           }`}
         >
           <AnimatedTitle
-            titles={["Software Developer", "Full Stack .NET Developer"]}
+            titles={["Full-Stack Developer", "Problem Solver", "Database Designer"]}
           />
         </div>
 
