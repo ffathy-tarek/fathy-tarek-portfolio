@@ -25,8 +25,16 @@ export function Hero() {
             visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            {"Fathy Tarek Sanad"}
+          <h1 className="font-display text-5xl font-extrabold leading-tight tracking-wide text-foreground sm:text-6xl lg:text-7xl">
+            <span className="block">{"Fathy Tarek"}</span>
+            <span
+              className="block text-primary"
+              style={{
+                filter: "drop-shadow(0 0 8px hsl(213 94% 58% / 0.4)) drop-shadow(0 0 20px hsl(213 94% 58% / 0.15))",
+              }}
+            >
+              {"Sanad"}
+            </span>
           </h1>
         </div>
 
@@ -36,7 +44,7 @@ export function Hero() {
           }`}
         >
           <AnimatedTitle
-            titles={["Software Developer", "Full Stack .NET Developer"]}
+            titles={["Full-Stack Developer", "Problem Solver", "Database Designer"]}
           />
         </div>
 
