@@ -104,3 +104,29 @@
   filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.4)) drop-shadow(0 0 16px hsl(var(--primary) / 0.2));
   text-shadow: 0 0 20px hsl(var(--primary) / 0.3);
 }
+
+/* Project card glassmorphism hover */
+@keyframes project-card-lift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+/* Smooth backdrop blur animation */
+.project-card-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Arrow slide animation */
+@keyframes arrow-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(4px);
+  }
+}
