@@ -19,6 +19,17 @@ export function Hero() {
         <div className="absolute -bottom-40 left-0 h-[400px] w-[400px] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
+      {/* Radial glow behind the name */}
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        style={{
+          width: "600px",
+          height: "400px",
+          background: "radial-gradient(ellipse at center, hsl(213 94% 58% / 0.08) 0%, hsl(213 94% 58% / 0.03) 40%, transparent 70%)",
+          filter: "blur(40px)",
+        }}
+      />
+
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         <div
           className={`transition-all duration-700 ${
