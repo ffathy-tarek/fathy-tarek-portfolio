@@ -25,8 +25,15 @@ export function Hero() {
             visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            {"Fathy Tarek Sanad"}
+          <h1 className="text-balance font-space-grotesk text-5xl font-extrabold tracking-wide leading-tight text-foreground sm:text-6xl lg:text-7xl">
+            <span className="block text-white">{"Fathy Tarek"}</span>
+            <span className="relative block text-primary">
+              {"Sanad"}
+              <span className="absolute inset-0 block animate-pulse blur-2xl -z-10 bg-primary/40 rounded-full" style={{
+                filter: "blur(24px)",
+                opacity: 0.6,
+              }} />
+            </span>
           </h1>
         </div>
 
@@ -36,7 +43,7 @@ export function Hero() {
           }`}
         >
           <AnimatedTitle
-            titles={["Software Developer", "Full Stack .NET Developer"]}
+            titles={["Full-Stack Developer", "Problem Solver", "Database Designer"]}
           />
         </div>
 
