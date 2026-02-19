@@ -30,7 +30,7 @@ export function AnimatedTitle({ titles }: AnimatedTitleProps) {
       } else {
         timeout = setTimeout(() => {
           setPhase("deleting");
-        }, 2000);
+        }, 3000);
       }
     } else if (phase === "deleting") {
       if (charIndex > 0) {
