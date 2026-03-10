@@ -35,6 +35,7 @@ interface Project {
   engineeringDecisions: { decision: string; detail: string }[];
   improvements: { title: string; items: string[] };
   github?: string;
+  thumbnail?: string;
 }
 
 const projects: Project[] = [
@@ -45,6 +46,7 @@ const projects: Project[] = [
     type: "Academic Team Project",
     shortDescription:
       "A 2D desktop game built with Java and OpenGL, featuring collision detection, multi-level architecture, and multiplayer modes.",
+    thumbnail: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brick%20Breaker%20Photo-wMnc8nEhdTBiq6RTuyiLIGKslbNFcn.jpg",
     summary:
       "Engineered a feature-complete 2D arcade game from scratch using Java and OpenGL. The project demonstrates strong fundamentals in real-time rendering, physics-based collision detection, and modular OOP architecture delivered under a tight 4-day sprint.",
     techStack: ["Java", "OpenGL", "OOP", "Agile"],
@@ -90,6 +92,7 @@ const projects: Project[] = [
     type: "Personal Project",
     shortDescription:
       "A normalized relational database for an e-commerce platform with full ERD modeling, complex queries, and performance tuning.",
+    thumbnail: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kiPiIg1Y93xQFEAhgYrdhRggxg9Gne.png",
     summary:
       "Designed a production-grade relational database schema for an e-commerce platform. Focused on rigorous normalization, referential integrity, and query performance optimization to handle real-world transactional workloads.",
     techStack: ["SQL Server", "ERD Modeling", "Database Normalization", "Query Optimization"],
@@ -133,6 +136,7 @@ const projects: Project[] = [
     type: "Academic / Personal Project",
     shortDescription:
       "A web-based system that helps instructors manage student attendance and grades through a clean dashboard interface.",
+    thumbnail: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F6cWWvsB4TJIIPsEcvOJpkLvDjdBvj.png",
     summary:
       "This project is a web-based Attendance and Grades Management System designed to help instructors efficiently manage student records, attendance tracking, and grade management in one place.",
     techStack: ["React.js", "JavaScript", "Firebase", "CSS", "Responsive Design"],
@@ -198,12 +202,23 @@ export function ProjectsSection() {
             <button
               key={project.title}
               onClick={() => setSelectedProject(project)}
-              className="project-card group relative cursor-pointer overflow-hidden rounded-xl border border-border/50 bg-background/30 p-6 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[0_8px_30px_hsl(213_94%_58%/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="project-card group relative cursor-pointer overflow-hidden rounded-xl border border-border/50 bg-background/30 text-left backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[0_8px_30px_hsl(213_94%_58%/0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               {/* Subtle gradient overlay */}
               <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-primary/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <div className="relative">
+              {/* Thumbnail Image */}
+              {project.thumbnail && (
+                <div className="mb-4 h-40 w-full overflow-hidden rounded-t-[10px]">
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              )}
+
+              <div className="relative p-6">
                 <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary/15">
                     <project.icon className="h-5 w-5" />
