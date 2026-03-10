@@ -12,6 +12,7 @@ import {
   Lightbulb,
   Zap,
   ListChecks,
+  BarChart3,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -124,6 +125,53 @@ const projects: Project[] = [
         "Improving Execution Plans to reduce I/O costs.",
       ],
     },
+  },
+  {
+    title: "Attendance & Grades Management System",
+    icon: BarChart3,
+    date: "Feb 2026 – Present",
+    type: "Academic / Personal Project",
+    shortDescription:
+      "A web-based system that helps instructors manage student attendance and grades through a clean dashboard interface.",
+    summary:
+      "This project is a web-based Attendance and Grades Management System designed to help instructors efficiently manage student records, attendance tracking, and grade management in one place.",
+    techStack: ["React.js", "JavaScript", "Firebase", "CSS", "Responsive Design"],
+    responsibilities: [
+      "Contributed across multiple Agile sprints working on different features of the system.",
+      "Developed UI components using React.js with a focus on clean, intuitive design.",
+      "Implemented student management functionality including add, edit, and delete operations.",
+      "Designed and integrated attendance tracking features for daily record-keeping.",
+      "Built grade management system with organized data storage and retrieval.",
+      "Ensured responsive and user-friendly interface across all devices.",
+    ],
+    engineeringDecisions: [
+      {
+        decision: "React Component Architecture",
+        detail:
+          "Structured the application with modular, reusable React components for maintainability and scalability.",
+      },
+      {
+        decision: "Firebase for Real-time Data",
+        detail:
+          "Implemented Firebase and Firestore for real-time data synchronization and cloud-based storage.",
+      },
+      {
+        decision: "Mobile-First Responsive Design",
+        detail:
+          "Designed the interface with mobile-first approach, ensuring optimal usability across desktop and mobile devices.",
+      },
+    ],
+    improvements: {
+      title: "Key Features & Impact",
+      items: [
+        "Student Management: Seamlessly add, edit, and delete student records.",
+        "Attendance Tracking: Organized attendance recording with visual dashboards.",
+        "Grade Management: Efficient grade entry, storage, and synchronization.",
+        "Dashboard Interface: Instructor-focused dashboard for quick data access and insights.",
+        "Data Persistence: Real-time synchronization using Firebase for reliable data storage.",
+      ],
+    },
+    github: "https://github.com/ffathy-tarek/Attendance_Grades_System",
   },
 ];
 
