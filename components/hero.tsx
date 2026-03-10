@@ -31,47 +31,10 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-4xl">
-        <div className="flex flex-col items-center gap-8 md:flex-row-reverse md:items-center md:gap-12 lg:gap-16">
-          {/* Profile Image */}
-          <div
-            className={`flex shrink-0 items-center justify-center transition-all duration-700 ${
-              visible ? "scale-100 opacity-100" : "scale-95 opacity-0"
-            }`}
-          >
-            <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96">
-              {/* Gradient border effect */}
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{
-                  background: "linear-gradient(135deg, hsl(213 94% 58% / 0.4), hsl(213 94% 58% / 0.1), transparent)",
-                  padding: "3px",
-                }}
-              >
-                <div className="relative h-full w-full overflow-hidden rounded-2xl bg-background">
-                  <Image
-                    src="/profile.jpg"
-                    alt="Fathy Tarek Sanad"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  {/* Soft shadow overlay */}
-                  <div className="absolute inset-0 rounded-2xl shadow-2xl shadow-primary/30" />
-                  {/* Subtle glow effect */}
-                  <div
-                    className="pointer-events-none absolute inset-0 rounded-2xl"
-                    style={{
-                      background: "radial-gradient(circle at 30% 30%, hsl(213 94% 58% / 0.1), transparent 70%)",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1 text-center md:text-left">
+      <div className="relative z-10 mx-auto w-full max-w-5xl">
+        <div className="flex flex-col-reverse items-center gap-8 md:gap-12">
+          {/* Text Content - Centered */}
+          <div className="w-full text-center md:w-auto md:flex-1">
             <div
               className={`transition-all duration-700 ${
                 visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
@@ -101,16 +64,16 @@ export function Hero() {
             </div>
 
             <div
-              className={`mt-8 flex flex-col items-center gap-3 transition-all delay-500 duration-700 md:items-start ${
+              className={`mt-8 flex flex-col items-center gap-3 transition-all delay-500 duration-700 ${
                 visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
               }`}
             >
-              <p className="flex items-center gap-2 text-sm text-muted-foreground md:justify-start">
+              <p className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 shrink-0 text-primary" />
                 {"Giza, Cairo, Egypt"}
               </p>
 
-              <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-4">
                 <a
                   href="#contact"
                   className="glow-btn inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -138,13 +101,52 @@ export function Hero() {
             </div>
 
             <p
-              className={`mt-8 flex items-center gap-2 text-pretty leading-relaxed text-muted-foreground transition-all delay-700 duration-700 md:justify-start ${
+              className={`mx-auto mt-8 max-w-xl text-pretty leading-relaxed text-muted-foreground transition-all delay-700 duration-700 ${
                 visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
               }`}
             >
-              <Crosshair className="h-4 w-4 shrink-0 text-primary" />
+              <span className="flex items-center justify-center gap-2">
+                <Crosshair className="h-4 w-4 shrink-0 text-primary" />
+              </span>
               {"Helping businesses transform ideas into reliable, scalable web solutions that drive real results"}
             </p>
+          </div>
+
+          {/* Profile Image - Right Side */}
+          <div
+            className={`hidden shrink-0 items-center justify-end md:flex transition-all duration-700 ${
+              visible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+            }`}
+          >
+            <div className="relative h-48 w-48 lg:h-56 lg:w-56">
+              {/* Gradient border effect */}
+              <div
+                className="absolute inset-0 rounded-xl"
+                style={{
+                  background: "linear-gradient(135deg, hsl(213 94% 58% / 0.4), hsl(213 94% 58% / 0.1), transparent)",
+                  padding: "2px",
+                }}
+              >
+                <div className="relative h-full w-full overflow-hidden rounded-xl bg-background">
+                  <Image
+                    src="/profile.jpg"
+                    alt="Fathy Tarek Sanad"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  {/* Soft shadow overlay */}
+                  <div className="absolute inset-0 rounded-xl shadow-2xl shadow-primary/30" />
+                  {/* Subtle glow effect */}
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-xl"
+                    style={{
+                      background: "radial-gradient(circle at 30% 30%, hsl(213 94% 58% / 0.1), transparent 70%)",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
