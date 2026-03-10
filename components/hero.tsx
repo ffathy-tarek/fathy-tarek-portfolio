@@ -40,16 +40,16 @@ export function Hero() {
                 visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
               }`}
             >
-              <h1 className="font-display text-4xl font-extrabold leading-tight tracking-wide text-foreground sm:text-5xl lg:text-6xl">
-                <span className="block">{"Fathy Tarek"}</span>
-                <span
-                  className="block text-primary"
+              <h1 className="font-display text-4xl font-extrabold leading-tight tracking-wide text-foreground sm:text-5xl lg:text-6xl inline-block">
+                <div className="block">{"Fathy Tarek"}</div>
+                <div
+                  className="block text-primary mx-auto w-fit"
                   style={{
                     filter: "drop-shadow(0 0 8px hsl(213 94% 58% / 0.4)) drop-shadow(0 0 20px hsl(213 94% 58% / 0.15))",
                   }}
                 >
                   {"Sanad"}
-                </span>
+                </div>
               </h1>
             </div>
 
@@ -114,11 +114,11 @@ export function Hero() {
 
           {/* Profile Image - Right Side */}
           <div
-            className={`hidden md:flex shrink-0 items-center justify-end w-full transition-all duration-700 ${
+            className={`hidden md:flex shrink-0 items-center justify-end w-full pr-12 lg:pr-20 transition-all duration-700 ${
               visible ? "scale-100 opacity-100" : "scale-95 opacity-0"
             }`}
           >
-            <div className="relative h-56 w-56 lg:h-64 lg:w-64">
+            <div className="relative h-52 w-52 lg:h-60 lg:w-60">
               {/* Gradient border effect */}
               <div
                 className="absolute inset-0 rounded-xl"
@@ -132,7 +132,7 @@ export function Hero() {
                     src="/profile.jpg"
                     alt="Fathy Tarek Sanad"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
                   />
                   {/* Soft shadow overlay */}
